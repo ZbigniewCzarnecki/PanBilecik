@@ -1,2 +1,2 @@
 # PanBilecik
-Platforma z biletami na wydarzenia kulturalne
+Platforma z biletami na wydarzenia kulturalne.
