@@ -12,7 +12,7 @@ Wypełnia zespół na zajęciach 2, krok po kroku. Można ją prowadzić w tym p
 |---|---|---|
 | Product Owner (PO) | Bartłomiej Pisarek | ustala kolejność w backlogu, decyduje o MoSCoW, akceptuje „zrobione” po sprawdzeniu kryteriów akceptacji |
 | Scrum Master (SM) | Jakub Kierklo | pilnuje zasad i terminów, usuwa przeszkody, prowadzi planowanie i przegląd sprintu, dba o aktualną tablicę |
-| Developerzy | Bartłomiej Pisarek, Jakub Kierklo, Jakub Kuśmierski, Zbigniew Czarnecki, Tomasz Nowak | wszyscy (PO i SM też programują), każdy bierze zadania z tablicy i wpisuje się przy nich |
+| Developerzy | Bartłomiej Pisarek, Jakub Kierklo, Jakub Kuśmierski, Zbigniew Czarnecki, Tomasz Nowak, Hubert Stępień | wszyscy (PO i SM też programują), każdy bierze zadania z tablicy i wpisuje się przy nich |
 
 Role z karty zespołu (koordynator, opiekun repozytorium, opiekun jakości) zostają jako dodatkowe obowiązki:
 
@@ -44,7 +44,8 @@ Kolejność w tabeli to kolejność priorytetów ustalona przez PO.
 | H1 | Jako widz chcę przeglądać listę nadchodzących wydarzeń, aby wybrać coś dla siebie. | 1. Lista jest posortowana od najbliższej daty i pokazuje nazwę, datę, miejsce i cenę. 2. Wydarzenia, które już się odbyły, nie pojawiają się na liście. | M | 2 |
 | H2 | Jako widz chcę zobaczyć szczegóły wydarzenia, aby zdecydować, czy kupić bilet. | 1. Widzę opis, adres, godzinę, cenę i liczbę wolnych biletów. 2. Gdy biletów nie ma, widzę napis „Wyprzedane”, a przycisk „Kup” jest nieaktywny. | M | 1 |
 | H3 | Jako organizator chcę dodać wydarzenie z ceną i liczbą biletów, aby sprzedawać je przez platformę. | 1. Formularz nie przyjmie wydarzenia bez nazwy, miejsca, ceny i liczby biletów ani z datą z przeszłości. 2. Po zapisaniu wydarzenie od razu pojawia się na liście dla widzów. | M | 3 |
-| H4 | Jako widz chcę kupić bilety na wybrane wydarzenie, aby mieć pewność, że wejdę. | 1. Po wybraniu liczby biletów, podaniu e-maila i potwierdzeniu widzę podsumowanie zamówienia, a liczba wolnych biletów maleje. 2. Nie mogę kupić więcej biletów, niż zostało, ani więcej niż 6 w jednym zamówieniu. 3. Płatność w sprincie 1 jest symulowana (przycisk „Zapłać”). | M | 5 |
+| H4a | Jako widz chcę kupić bilety na wybrane wydarzenie, aby mieć pewność, że wejdę. | 1. Po wybraniu liczby biletów, podaniu e-maila i potwierdzeniu widzę podsumowanie zamówienia, a liczba wolnych biletów maleje. 2. Płatność jest symulowana (przycisk „Zapłać”). | M | 3 |
+| H4b | Jako widz chcę mieć pewność, że kupuję bilety, które naprawdę są dostępne, aby nie stracić pieniędzy. | 1. Nie mogę kupić więcej biletów, niż zostało. 2. Nie mogę kupić więcej niż 6 biletów w jednym zamówieniu. | M | 2 |
 | H5 | Jako widz chcę dostać bilet z kodem QR, aby pokazać go przy wejściu z telefonu. | 1. Każdy kupiony bilet ma unikalny kod QR. 2. Bilet przychodzi na e-mail podany przy zakupie. | M | 3 |
 | H6 | Jako widz chcę założyć konto, aby mieć wszystkie swoje bilety w jednym miejscu. | 1. Nie da się założyć drugiego konta na ten sam e-mail. 2. Po zalogowaniu w zakładce „Moje bilety” widzę bilety kupione na ten adres. | S | 3 |
 | H7 | Jako widz chcę filtrować wydarzenia po kategorii i dacie, aby szybciej znaleźć to, co mnie interesuje. | 1. Wybór kategorii (koncert, teatr, kino, wystawa) i zakresu dat zawęża listę. 2. Gdy nic nie pasuje, widzę komunikat „Brak wydarzeń” i przycisk czyszczenia filtrów. | S | 3 |
@@ -60,12 +61,12 @@ Recenzent wpisuje numer historyjki przy literze, której ona **nie spełnia**, i
 
 | Litera | Znaczenie | Uwagi recenzenta |
 |---|---|---|
-| I | Independent: niezależna od innych | |
-| N | Negotiable: opisuje potrzebę, nie gotowe rozwiązanie | |
-| V | Valuable: daje wartość użytkownikowi | |
-| E | Estimable: da się ją oszacować | |
-| S | Small: mieści się w jednym sprincie | |
-| T | Testable: wiadomo, jak sprawdzić, że działa | |
+| I | Independent: niezależna od innych | brak|
+| N | Negotiable: opisuje potrzebę, nie gotowe rozwiązanie |brak |
+| V | Valuable: daje wartość użytkownikowi |brak |
+| E | Estimable: da się ją oszacować |brak |
+| S | Small: mieści się w jednym sprincie |brak |
+| T | Testable: wiadomo, jak sprawdzić, że działa |brak |
 
 ## Krok 4. Estymacja (Planning Poker)
 
@@ -73,22 +74,25 @@ Recenzent wpisuje numer historyjki przy literze, której ona **nie spełnia**, i
 - Historyjka wzorcowa (2 punkty): H1, lista nadchodzących wydarzeń.
 - Historyjki z największym rozrzutem głosów i co ustaliliście:
   - H11 (wybór miejsca na planie sali), głosy od 5 do 20. Każdy inaczej wyobrażał sobie plan sali. Zostaje 13 i trafia do Could have, a przed wzięciem do sprintu trzeba ją podzielić na „widz widzi plan sali” i „widz rezerwuje miejsce bez ryzyka, że ktoś kupi je w tym samym momencie”.
-  - H4 (zakup biletów), głosy od 2 do 8. Część osób liczyła prawdziwą płatność online. Ustaliliśmy, że w sprincie 1 płatność jest symulowana, a prawdziwa to osobna historyjka H12. Po drugim głosowaniu 5 punktów.
+  - H4 (zakup biletów), głosy od 2 do 8. Część osób liczyła prawdziwą płatność online. Ustaliliśmy, że w sprincie 1 płatność jest symulowana, a prawdziwa to osobna historyjka H12. Po planowaniu sprintu podzieliliśmy H4 na H4a (3 pkt) i H4b (2 pkt).
 
 ## Krok 5. Plan sprintu 1
 
-**Cel sprintu** (jedno zdanie, co użytkownik będzie mógł zrobić po sprincie): Widz może znaleźć wydarzenie dodane przez organizatora i kupić na nie bilet.
+**Cel sprintu** (jedno zdanie, co użytkownik będzie mógł zrobić po sprincie): Widz może zobaczyć wydarzenia dodane przez organizatora.
 
-**Ile punktów bierzemy:** 11 (H1, H2, H3, H4)
+**Ile punktów bierzemy:** 6 (H1, H2, H3). H4 przechodzi do sprintu 2.
 
 | Historyjka | Zadania techniczne | Kto |
 |---|---|---|
-| H3 Organizator dodaje wydarzenie (3) | model danych wydarzenia, formularz dodawania, walidacja pól i daty | Jakub Kuśmierski |
+| Przygotowanie | szkielet aplikacji, model danych wydarzenia | Jakub Kierklo |
+| H3 Organizator dodaje wydarzenie (3) | formularz dodawania, walidacja pól i daty | Jakub Kuśmierski |
 | H1 Lista wydarzeń (2) | widok listy, sortowanie po dacie, ukrywanie minionych wydarzeń | Tomasz Nowak |
 | H2 Szczegóły wydarzenia (1) | strona szczegółów, stan „Wyprzedane” i nieaktywny przycisk „Kup” | Zbigniew Czarnecki |
-| H4 Zakup biletów (5) | model zamówienia, formularz zakupu z e-mailem, zmniejszanie puli biletów, limit 6 sztuk i blokada zakupu ponad pulę, symulowana płatność, test limitu biletów | Bartłomiej Pisarek (model zamówienia, limity), Jakub Kierklo (formularz zakupu, symulowana płatność, test) |
+| Przygotowanie | przykładowe wydarzenia do testowania listy i szczegółów | Bartłomiej Pisarek |
+| Przygotowanie | konfiguracja testów i lintera, testy do H1 i H3 | Hubert |
+| Przygotowanie | zasady pracy z Gitem w README | Zbigniew Czarnecki |
 
-**Tablica:** link do GitHub Projects (albo zdjęcie tablicy papierowej): …
+**Tablica:** link do GitHub Projects: github.com/users/ZbigniewCzarnecki/projects/2
 
 Kolumny: `Backlog` → `Do zrobienia` → `W toku` → `Przegląd` → `Zrobione`
 

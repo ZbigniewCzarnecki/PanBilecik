@@ -6,11 +6,12 @@ Wypełniacie ją na koniec zajęć 1 (7 min). To umowa zespołu na cały semestr
 
 | Imię i nazwisko | Login GitHub | Mocna strona (1–2 słowa) | Czego chcę się nauczyć |
 |---|---|---|---|
-| Bartłomiej Pisarek| 1Pisar| Zarządzanie|Pracy w grupie|
-| Jakub Kierklo| Jakub Kierklo| C#|Pracy w grupie|
-| Jakub Kuśmierski| OriSonik| Python, prawo i finansów|Pracy w grupie|
-| Zbigniew Czarnecki| ZbigniewCzarnecki| Unity, marketing|Pracy w grupie|
-|Tomasz Nowak|NovvakT|Pracowitość|Pracy w grupie|
+| Bartłomiej Pisarek| 1Pisar| Zarządzanie| Pracy w grupie|
+| Jakub Kierklo| Jakub Kierklo| C#| Pracy w grupie|
+| Jakub Kuśmierski| OriSonik| Python, prawo i finansów| Pracy w grupie|
+| Zbigniew Czarnecki| ZbigniewCzarnecki| Unity, marketing| Pracy w grupie|
+| Tomasz Nowak| NovvakT| Pracowitość| Pracy w grupie|
+| Hubert Stępień| 1000rounds| Python| Pracy w grupie|
 
 ## 1. Komunikacja
 
