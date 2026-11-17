@@ -85,7 +85,7 @@ Recenzent wpisuje numer historyjki przy literze, której ona **nie spełnia**, i
 | Historyjka | Zadania techniczne | Kto |
 |---|---|---|
 | Przygotowanie | szkielet aplikacji, model danych wydarzenia | Jakub Kierklo |
-| H3 Organizator dodaje wydarzenie (3) | formularz dodawania, walidacja pól i daty | Jakub Kuśmierski |
+| H3 Organizator dodaje wydarzenie (3) | Implementacja dodawania wydarzeń przez organizatora | Jakub Kuśmierski |
 | H1 Lista wydarzeń (2) | widok listy, sortowanie po dacie, ukrywanie minionych wydarzeń | Tomasz Nowak |
 | H2 Szczegóły wydarzenia (1) | strona szczegółów, stan „Wyprzedane” i nieaktywny przycisk „Kup” | Zbigniew Czarnecki |
 | Przygotowanie | przykładowe wydarzenia do testowania listy i szczegółów | Bartłomiej Pisarek |
