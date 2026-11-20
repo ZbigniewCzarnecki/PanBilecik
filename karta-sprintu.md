@@ -86,7 +86,7 @@ Recenzent wpisuje numer historyjki przy literze, której ona **nie spełnia**, i
 |---|---|---|
 | Przygotowanie | szkielet aplikacji, model danych wydarzenia | Jakub Kierklo |
 | H3 Organizator dodaje wydarzenie (3) | Implementacja dodawania wydarzeń przez organizatora: formularz dodawania, walidacja pól i daty | Jakub Kuśmierski |
-| H1 Lista wydarzeń (2) | widok listy, sortowanie po dacie, ukrywanie minionych wydarzeń | Tomasz Nowak |
+| H1 Lista wydarzeń (2) | Struktura listy: nazwa wydarzenia, data wydarzenia, miejsce wydarzenia. Możliwości: sortowanie po dacie, ukrywanie minionych wydarzeń | Tomasz Nowak |
 | H2 Szczegóły wydarzenia (1) | strona szczegółów, stan „Wyprzedane” i nieaktywny przycisk „Kup” | Zbigniew Czarnecki |
 | Przygotowanie | przykładowe wydarzenia do testowania listy i szczegółów | Bartłomiej Pisarek |
 | Przygotowanie | konfiguracja testów i lintera, testy do H1 i H3 | Hubert |
