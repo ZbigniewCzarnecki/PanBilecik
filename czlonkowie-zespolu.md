@@ -3,3 +3,4 @@ Hubert Stępień: 177747
 Bartłomiej Pisarek: 168289
 Zbigniew Czarnecki: 168044
 Jakub Kusmierski: 168813
+Tomasz Nowak: 178127
