@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="PanBilecik.Client/PanBilecik.Client.csproj" />
+  <Project Path="PanBilecik/PanBilecik.csproj" />
+</Solution>
