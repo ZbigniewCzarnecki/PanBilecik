@@ -1,0 +1,61 @@
+@page "/login"
+@using System.ComponentModel.DataAnnotations
+@inject IConfiguration Configuration
+
+<PageTitle>Logowanie</PageTitle>
+
+<h1>Logowanie</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <EditForm FormName="login" Model="Model" OnValidSubmit="HandleValidSubmit">
+            <DataAnnotationsValidator />
+            <ValidationSummary class="text-danger" />
+
+            <div class="mb-3">
+                <label for="username" class="form-label">Login</label>
+                <InputText id="username" class="form-control" @bind-Value="Model.Username" />
+                <ValidationMessage For="() => Model.Username" class="text-danger" />
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Hasło</label>
+                <InputText id="password" type="password" class="form-control" @bind-Value="Model.Password" />
+                <ValidationMessage For="() => Model.Password" class="text-danger" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Zaloguj</button>
+        </EditForm>
+
+        @if (_message is not null)
+        {
+            <p class="mt-3 @(_success ? "text-success" : "text-danger")" role="status">@_message</p>
+        }
+    </div>
+</div>
+
+@code {
+    [SupplyParameterFromForm]
+    private LoginModel Model { get; set; } = new();
+
+    private string? _message;
+    private bool _success;
+
+    private void HandleValidSubmit()
+    {
+        var expectedUsername = Configuration["Login:Username"];
+        var expectedPassword = Configuration["Login:Password"];
+
+        _success = Model.Username == expectedUsername && Model.Password == expectedPassword;
+        _message = _success ? "Zalogowano." : "Nieprawidłowy login lub hasło.";
+    }
+
+    public class LoginModel
+    {
+        [Required(ErrorMessage = "Podaj login.")]
+        public string Username { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Podaj hasło.")]
+        public string Password { get; set; } = string.Empty;
+    }
+}
